@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>给哥哥的新婚祝福</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+	window.onload=function(){
+				var liNodes = document.getElementsByTagName("li");		
+				for (var i=0; i<liNodes.length; ++i)
+				 {						
+					liNodes[i].onmouseover = function() 
+					{
+						this.className = "sfhover";
+					} 							
+					liNodes[i].onmouseout = function() 
+					{
+						this.className = "";
+					} 				
+				}			
+				var p=document.getElementById("picScroll");
+				var p1=document.getElementById("picScroll1");
+				var l=setInterval(changeToLeft,10);	
+				function changeToLeft()
+				{
+					if(p.scrollLeft>=p1.offsetWidth)
+					{
+						p.scrollLeft=0;
+					}	
+					else
+					{
+						p.scrollLeft+=1;
+					}	   
+				}		
+					p.onmouseover=function()
+					{
+						clearInterval(l);
+					}
+					p.onmouseout=function()
+					{
+						l=setInterval(changeToLeft,10);
+					} 
+
+				
+};
+	 $(document).ready(function(){
+      	$("#user").blur(function(){
+      	if($("#user").val()==""){
+      		$(".one").html("请输入用户名!");
+      	}
+      	else{
+      		$(".one").html("");
+      	}
+      });
+      $("#pswd1").blur(function(){
+      	if($("#pswd1").val()==""){
+      		$(".two").html("密码不能为空!");
+      	}
+      	else{
+      		$(".two").html("");
+      	}
+      });
+		$("#pswd2").blur(function(){
+      	if($("#pswd2").val()==""){
+      		$(".three").html("请输入邮箱!");
+      	}
+      	else{
+      		$(".three").html("");
+      	}
+      }); 
+
+		
+		
+});
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			$(".last-one").html("请写下你的祝福吧!");
+		});
+		$("#btn").click(function(){
+			$(".last-one").html($("#txt").val());
+		})
+	});
+
+	</script>
+	<style type="text/css">
+		#picScroll{
+			   white-space: nowrap; 
+			   overflow:hidden; 
+			   width:1335px;
+			   margin: 0 auto;
+			   height:750px;
+			   float: left;
+			   margin-top: 0px;
+			   margin-left: 0px;
+
+			}
+			img{
+			  width: 350px;
+			  height: 350px;
+			}
+			#picScroll3{
+				width: 1335px;
+				height: 350px;
+				float: left;
+				background-image: url(images/26.jpg);
+			}
+			#nav {
+				margin-top: 20px;
+				margin-left: 50px;
+				line-height: 24px; 
+				list-style-type: none;
+				float: left;
+				margin-top: 280px;
+				margin-left: 00px; 
+				
+			}					
+			#nav a:link {
+				display: block; /*改变为块级元素*/
+				width: 180px;
+				text-align: center;
+				color: /*#666*/ darkgray; 
+				/*opacity: 0.5;*/
+				text-decoration: none;
+			}					
+			#nav a:hover {
+				color:  pink;
+				text-decoration: underline;
+				font-weight: bold;
+				background:darkgray;
+			}
+			#nav li {
+				float: left; 
+				width: 180px; 
+				background: pink;
+			}					
+			#nav li ul {
+				line-height: 27px;
+				list-style-type: none;
+				text-align: left;						
+				width: 180px; 						
+				display: none;
+			}
+			#nav li ul li{
+				float: left; 
+				width: 120px;						
+			}
+			#nav li ul a:link {
+				display: block; 
+				width: 75px;
+				text-align: left;
+				padding-left: 24px;
+				color: darkgray;
+			}							
+			#nav li ul a:hover {
+				color: /*#F3F3F3*/ pink;
+				text-decoration: none;
+				font-weight: normal;
+				background:darkgray;
+			}
+			#nav li.sfhover ul {						
+				display: block;
+				position: absolute;
+			}	
+			#nav-S{
+				width: 420px;
+				height: 300px;
+				float: left;
+				margin-left: 50px;
+				margin-top: 20px;
+			}	
+			#S-one{
+				width: 340px;
+				height: 150px;
+				float: left;
+				margin-top: 39px;
+				margin-left: 15px;
+			}	
+			#S-two{
+				width: 320px;
+				height: 50px;
+				float: left;
+				margin-top: 19px;
+				margin-left: 15px;
+				font-family: "幼圆";
+				font-size: 28px;
+			}
+			#foot{
+				width: 1335px;
+				height: 500px;
+				float: left;
+				margin-top: -400px;
+				background-image: url(images/7.jpg);
+			}	
+			.foot-one {
+				 position: absolute;
+				 width: 400px;
+				 height: 465px;
+				 margin-left: 20px;
+				 margin-top: 30px;
+
+				}
+			#iframe1{
+				width: 400px;
+				height: 465px;
+				border: none;
+				}
+			.foot-two{
+				width: 600px;
+				height:465px;
+				border: 1px dotted pink;
+				float: left;
+				margin-left: 450px;
+				margin-top: 30px;
+				text-align: left;
+				line-height: 25px;
+				font-family: "仿宋";
+				font-size: 20px;
+				background-color: pink;
+				opacity: 0.5;
+			}
+			.xsw{
+				float: left;margin-left: 10px;
+				margin-top: 0px;
+			}
+			#last{
+				width: 200px;
+				height: 465px;
+				float: left;
+				margin-top: 30px;
+				margin-left: 15px;
+			}
+			.last-one{
+				width: 150px;
+				height: 200px;
+				float: left;
+				margin-top: 10px;
+				margin-left: 10px;
+				border: 1px dotted darkgray;
+				background-color: lightgray;
+			}
+			#txt{
+				width: 100px;
+				height: 150px;
+				float: left;
+				margin-left: 20px;
+				margin-top: 10px;
+			}
+			#last-two{
+				width: 150px;
+				height: 180px;
+				float: left;
+				margin-top: 10px;
+				margin-left: 10px;
+			}
+	</style>
+</head>
+<body>
+<div id="picScroll3">
+	  	<ul id="nav">
+		<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index.html
+">我想对你们说的呀</a>
+			<ul>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index.html
+">我想说的</a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index.html
+">还想说的</a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index.html
+">就想说的</a></li>
+			</ul>
+		</li>
+		<li><a href="https://github.com/xushiwei201605/lab5-web2/blob/master/index2.html
+">你们是我喜欢的哇</a>
+			<ul>
+				<li><a href="https://github.com/xushiwei201605/lab5-web2/blob/master/index2.html
+">喜欢你们</a></li>
+				<li><a href="https://github.com/xushiwei201605/lab5-web2/blob/master/index2.html
+">还是你们</a></li>
+				<li><a href="https://github.com/xushiwei201605/lab5-web2/blob/master/index2.html
+">就是你们</a></li>
+			</ul>
+		</li>
+		<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index3.html
+">你们是最幸福的呀</a>
+			<ul>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index3.html
+">小的幸福</a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index3.html
+">大的幸福</a></li>
+				<li><a href="https://htmlpreview.github.io/?https://github.com/xushiwei201605/lab5-web2/blob/master/index3.html
+">好多幸福</a></li>
+			</ul>
+		</li>
+		<li><a href="#">对于未来的畅想呢</a>
+			<ul>
+				<li><a href="#">相遇时</a></li>
+				<li><a href="#">初恋时</a></li>
+				<li><a href="#">结婚时</a></li>
+			</ul>
+		</li>
+	</ul>
+	<div id="nav-S">
+		<div id="S-two">
+		Stay here Forever❤❤❤
+		</div>
+		<div id="S-one">
+			<form>
+				用户名:<input type="text" name="username" id="user"><span class="one"></span>
+				</br>
+				<br/>
+				&nbsp;&nbsp;&nbsp;密码:<input type="password" name="password" id="pswd1"><span class="two"></span>
+				<br/>
+				<br/>
+				&nbsp;&nbsp;&nbsp;邮箱:<input type="text" name="email" id="pswd2"><span class="three"></span><br/>
+				<br/>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="登录">
+			</form>
+		</div>
+	</div>
+</div>
+	<div id="picScroll">
+		<span id="picScroll1">
+			<img src="images/1.jpg" >
+			<img src="images/2.jpg" >
+			<img src="images/3.jpg" >
+			<img src="images/4.jpg" >
+			<img src="images/5.jpg" >
+			<img src="images/6.jpg" >
+			<img src="images/7.jpg" >
+			<img src="images/8.jpg" >
+		</span>
+		<span id="picScroll2">
+			<img src="images/1.jpg"  >
+			<img src="images/2.jpg"  >
+			<img src="images/3.jpg"  >
+			<img src="images/4.jpg"  >
+			<img src="images/5.jpg"  >
+			<img src="images/6.jpg"  >
+			<img src="images/7.jpg"  >
+			<img src="images/8.jpg"  >
+		</span>
+ 	</div> 
+<div id="foot">
+<div class="foot-one">
+	<iframe src="file:///F:/%E5%A4%A7%E4%BA%8C%E4%B8%8A%E5%AD%A6%E6%9C%9F/web2/%E7%A5%9D%E7%A6%8F%E6%A8%A1%E6%8B%9F/content.html" id="iframe1"></iframe>
+</div>
+<div  class="foot-two">
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我希望你们是得到祝福最多的一对新人！</p>
+	<p>我还记得小时候你带我用报纸叠小船和剑，咱俩打架，还有我牢固不说我都不知道的你把我胳膊咬紫了......</p>
+	<p>转眼你都结婚了，上高中那会，我会考，你们提着好吃的去看我，当时对我嫂子唯一的印象就是脸红，大眼；牙不怎么齐;再后来就是，我偷着请假出去问，带着我吃好吃的。哈哈哈！还闹了个大别扭，不过都过去了吗，对不对~~~</p>
+	<p>就是我所知道的，你俩也是一路坎坷走过来的吧，多不容易啊，不过真的挺羡慕你们俩呀，其实一路平坦也未必好啊，前边都磨合完了，后边就剩下平路了啊。</p>
+	<p>你们余生一定会幸福的！❤❤❤❤❤❤</p>
+	<br/>
+	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;From:世伟</p>
+</div>
+<div id="last">
+	<div class="last-one">
+	</div>
+	<div id="last-two">
+		<textarea id="txt" rows="8" cols="8"></textarea>
+	</div>
+	
+	</br>
+	<input type="button" value="写下祝福" id="btn1">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="submit" value="提交" id="btn">
+</div>
+</div>
+
+ 	
+</body>
+</html>
